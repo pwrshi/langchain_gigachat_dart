@@ -1,0 +1,378 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+part of 'types.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+
+/// @nodoc
+mixin _$ChatGigaChatOptions {
+  /// The model used to generate completions
+  /// default 'GigaChat'
+  String get model => throw _privateConstructorUsedError;
+
+  /// The temperature of the model. Increasing the temperature
+  /// will make the model answer more creatively.
+  double? get temperature => throw _privateConstructorUsedError;
+
+  /// An alternative to sampling with temperature, called nucleus
+  /// sampling, where the model considers the
+  /// results of the tokens with top_p probability mass.
+  double? get topP => throw _privateConstructorUsedError;
+
+  /// How many completions to generate for each prompt.
+  int get n => throw _privateConstructorUsedError;
+
+  /// The maximum number of tokens to generate in the completion.
+  int get maxTokens => throw _privateConstructorUsedError;
+
+  /// Sets how strongly to penalize repetitions. A higher value (e.g., 1.5)
+  /// will penalize repetitions more strongly, while a lower value (e.g., 0.8)
+  /// will be more lenient. (Default: 1.0)
+  double? get repeatPenalty => throw _privateConstructorUsedError;
+
+  /// Sets that the message will arrive in parts
+  bool? get stream => throw _privateConstructorUsedError;
+
+  /// Sets the time interval for transmitting parts of messages in seconds
+  num get updateInterval => throw _privateConstructorUsedError;
+
+  /// Sets limit for concurrecy runnig (Default: 1)
+  int get concurrencyLimit => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $ChatGigaChatOptionsCopyWith<ChatGigaChatOptions> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ChatGigaChatOptionsCopyWith<$Res> {
+  factory $ChatGigaChatOptionsCopyWith(
+          ChatGigaChatOptions value, $Res Function(ChatGigaChatOptions) then) =
+      _$ChatGigaChatOptionsCopyWithImpl<$Res, ChatGigaChatOptions>;
+  @useResult
+  $Res call(
+      {String model,
+      double? temperature,
+      double? topP,
+      int n,
+      int maxTokens,
+      double? repeatPenalty,
+      bool? stream,
+      num updateInterval,
+      int concurrencyLimit});
+}
+
+/// @nodoc
+class _$ChatGigaChatOptionsCopyWithImpl<$Res, $Val extends ChatGigaChatOptions>
+    implements $ChatGigaChatOptionsCopyWith<$Res> {
+  _$ChatGigaChatOptionsCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? model = null,
+    Object? temperature = freezed,
+    Object? topP = freezed,
+    Object? n = null,
+    Object? maxTokens = null,
+    Object? repeatPenalty = freezed,
+    Object? stream = freezed,
+    Object? updateInterval = null,
+    Object? concurrencyLimit = null,
+  }) {
+    return _then(_value.copyWith(
+      model: null == model
+          ? _value.model
+          : model // ignore: cast_nullable_to_non_nullable
+              as String,
+      temperature: freezed == temperature
+          ? _value.temperature
+          : temperature // ignore: cast_nullable_to_non_nullable
+              as double?,
+      topP: freezed == topP
+          ? _value.topP
+          : topP // ignore: cast_nullable_to_non_nullable
+              as double?,
+      n: null == n
+          ? _value.n
+          : n // ignore: cast_nullable_to_non_nullable
+              as int,
+      maxTokens: null == maxTokens
+          ? _value.maxTokens
+          : maxTokens // ignore: cast_nullable_to_non_nullable
+              as int,
+      repeatPenalty: freezed == repeatPenalty
+          ? _value.repeatPenalty
+          : repeatPenalty // ignore: cast_nullable_to_non_nullable
+              as double?,
+      stream: freezed == stream
+          ? _value.stream
+          : stream // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      updateInterval: null == updateInterval
+          ? _value.updateInterval
+          : updateInterval // ignore: cast_nullable_to_non_nullable
+              as num,
+      concurrencyLimit: null == concurrencyLimit
+          ? _value.concurrencyLimit
+          : concurrencyLimit // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ChatGigaChatOptionsImplCopyWith<$Res>
+    implements $ChatGigaChatOptionsCopyWith<$Res> {
+  factory _$$ChatGigaChatOptionsImplCopyWith(_$ChatGigaChatOptionsImpl value,
+          $Res Function(_$ChatGigaChatOptionsImpl) then) =
+      __$$ChatGigaChatOptionsImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String model,
+      double? temperature,
+      double? topP,
+      int n,
+      int maxTokens,
+      double? repeatPenalty,
+      bool? stream,
+      num updateInterval,
+      int concurrencyLimit});
+}
+
+/// @nodoc
+class __$$ChatGigaChatOptionsImplCopyWithImpl<$Res>
+    extends _$ChatGigaChatOptionsCopyWithImpl<$Res, _$ChatGigaChatOptionsImpl>
+    implements _$$ChatGigaChatOptionsImplCopyWith<$Res> {
+  __$$ChatGigaChatOptionsImplCopyWithImpl(_$ChatGigaChatOptionsImpl _value,
+      $Res Function(_$ChatGigaChatOptionsImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? model = null,
+    Object? temperature = freezed,
+    Object? topP = freezed,
+    Object? n = null,
+    Object? maxTokens = null,
+    Object? repeatPenalty = freezed,
+    Object? stream = freezed,
+    Object? updateInterval = null,
+    Object? concurrencyLimit = null,
+  }) {
+    return _then(_$ChatGigaChatOptionsImpl(
+      model: null == model
+          ? _value.model
+          : model // ignore: cast_nullable_to_non_nullable
+              as String,
+      temperature: freezed == temperature
+          ? _value.temperature
+          : temperature // ignore: cast_nullable_to_non_nullable
+              as double?,
+      topP: freezed == topP
+          ? _value.topP
+          : topP // ignore: cast_nullable_to_non_nullable
+              as double?,
+      n: null == n
+          ? _value.n
+          : n // ignore: cast_nullable_to_non_nullable
+              as int,
+      maxTokens: null == maxTokens
+          ? _value.maxTokens
+          : maxTokens // ignore: cast_nullable_to_non_nullable
+              as int,
+      repeatPenalty: freezed == repeatPenalty
+          ? _value.repeatPenalty
+          : repeatPenalty // ignore: cast_nullable_to_non_nullable
+              as double?,
+      stream: freezed == stream
+          ? _value.stream
+          : stream // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      updateInterval: null == updateInterval
+          ? _value.updateInterval
+          : updateInterval // ignore: cast_nullable_to_non_nullable
+              as num,
+      concurrencyLimit: null == concurrencyLimit
+          ? _value.concurrencyLimit
+          : concurrencyLimit // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChatGigaChatOptionsImpl implements _ChatGigaChatOptions {
+  const _$ChatGigaChatOptionsImpl(
+      {this.model = 'GigaChat',
+      this.temperature,
+      this.topP,
+      this.n = 1,
+      this.maxTokens = 1024,
+      this.repeatPenalty,
+      this.stream,
+      this.updateInterval = 0.0,
+      this.concurrencyLimit = 1});
+
+  /// The model used to generate completions
+  /// default 'GigaChat'
+  @override
+  @JsonKey()
+  final String model;
+
+  /// The temperature of the model. Increasing the temperature
+  /// will make the model answer more creatively.
+  @override
+  final double? temperature;
+
+  /// An alternative to sampling with temperature, called nucleus
+  /// sampling, where the model considers the
+  /// results of the tokens with top_p probability mass.
+  @override
+  final double? topP;
+
+  /// How many completions to generate for each prompt.
+  @override
+  @JsonKey()
+  final int n;
+
+  /// The maximum number of tokens to generate in the completion.
+  @override
+  @JsonKey()
+  final int maxTokens;
+
+  /// Sets how strongly to penalize repetitions. A higher value (e.g., 1.5)
+  /// will penalize repetitions more strongly, while a lower value (e.g., 0.8)
+  /// will be more lenient. (Default: 1.0)
+  @override
+  final double? repeatPenalty;
+
+  /// Sets that the message will arrive in parts
+  @override
+  final bool? stream;
+
+  /// Sets the time interval for transmitting parts of messages in seconds
+  @override
+  @JsonKey()
+  final num updateInterval;
+
+  /// Sets limit for concurrecy runnig (Default: 1)
+  @override
+  @JsonKey()
+  final int concurrencyLimit;
+
+  @override
+  String toString() {
+    return 'ChatGigaChatOptions(model: $model, temperature: $temperature, topP: $topP, n: $n, maxTokens: $maxTokens, repeatPenalty: $repeatPenalty, stream: $stream, updateInterval: $updateInterval, concurrencyLimit: $concurrencyLimit)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChatGigaChatOptionsImpl &&
+            (identical(other.model, model) || other.model == model) &&
+            (identical(other.temperature, temperature) ||
+                other.temperature == temperature) &&
+            (identical(other.topP, topP) || other.topP == topP) &&
+            (identical(other.n, n) || other.n == n) &&
+            (identical(other.maxTokens, maxTokens) ||
+                other.maxTokens == maxTokens) &&
+            (identical(other.repeatPenalty, repeatPenalty) ||
+                other.repeatPenalty == repeatPenalty) &&
+            (identical(other.stream, stream) || other.stream == stream) &&
+            (identical(other.updateInterval, updateInterval) ||
+                other.updateInterval == updateInterval) &&
+            (identical(other.concurrencyLimit, concurrencyLimit) ||
+                other.concurrencyLimit == concurrencyLimit));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, model, temperature, topP, n,
+      maxTokens, repeatPenalty, stream, updateInterval, concurrencyLimit);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChatGigaChatOptionsImplCopyWith<_$ChatGigaChatOptionsImpl> get copyWith =>
+      __$$ChatGigaChatOptionsImplCopyWithImpl<_$ChatGigaChatOptionsImpl>(
+          this, _$identity);
+}
+
+abstract class _ChatGigaChatOptions implements ChatGigaChatOptions {
+  const factory _ChatGigaChatOptions(
+      {final String model,
+      final double? temperature,
+      final double? topP,
+      final int n,
+      final int maxTokens,
+      final double? repeatPenalty,
+      final bool? stream,
+      final num updateInterval,
+      final int concurrencyLimit}) = _$ChatGigaChatOptionsImpl;
+
+  @override
+
+  /// The model used to generate completions
+  /// default 'GigaChat'
+  String get model;
+  @override
+
+  /// The temperature of the model. Increasing the temperature
+  /// will make the model answer more creatively.
+  double? get temperature;
+  @override
+
+  /// An alternative to sampling with temperature, called nucleus
+  /// sampling, where the model considers the
+  /// results of the tokens with top_p probability mass.
+  double? get topP;
+  @override
+
+  /// How many completions to generate for each prompt.
+  int get n;
+  @override
+
+  /// The maximum number of tokens to generate in the completion.
+  int get maxTokens;
+  @override
+
+  /// Sets how strongly to penalize repetitions. A higher value (e.g., 1.5)
+  /// will penalize repetitions more strongly, while a lower value (e.g., 0.8)
+  /// will be more lenient. (Default: 1.0)
+  double? get repeatPenalty;
+  @override
+
+  /// Sets that the message will arrive in parts
+  bool? get stream;
+  @override
+
+  /// Sets the time interval for transmitting parts of messages in seconds
+  num get updateInterval;
+  @override
+
+  /// Sets limit for concurrecy runnig (Default: 1)
+  int get concurrencyLimit;
+  @override
+  @JsonKey(ignore: true)
+  _$$ChatGigaChatOptionsImplCopyWith<_$ChatGigaChatOptionsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

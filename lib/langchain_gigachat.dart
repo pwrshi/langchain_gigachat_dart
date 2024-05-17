@@ -1,4 +1,4 @@
 /// A Very Good Project created by Very Good CLI.
-library;
+// library;
 
-export 'src/langchain_gigachat.dart';
+// export 'src/langchain_gigachat.dart';
