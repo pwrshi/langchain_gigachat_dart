@@ -4,11 +4,9 @@
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 [![License: MIT][license_badge]][license_link]
 
-A Very Good Project created by Very Good CLI.
+langchain_gigachat is a package that provides access to the [GigaChat](https://developers.sber.ru/portal/products/gigachat) API in your Dart applications. This package allows you to interact with the AI and use its capabilities within your app.
 
 ## Installation 💻
-
-**❗ In order to start using Langchain Gigachat you must have the [Dart SDK][dart_install_link] installed on your machine.**
 
 Install via `dart pub add`:
 
@@ -18,33 +16,36 @@ dart pub add langchain_gigachat
 
 ---
 
-## Continuous Integration 🤖
 
-Langchain Gigachat comes with a built-in [GitHub Actions workflow][github_actions_link] powered by [Very Good Workflows][very_good_workflows_link] but you can also add your preferred CI/CD solution.
+## Usage
 
-Out of the box, on each pull request and push, the CI `formats`, `lints`, and `tests` the code. This ensures the code remains consistent and behaves correctly as you add functionality or make changes. The project uses [Very Good Analysis][very_good_analysis_link] for a strict set of analysis options used by our team. Code coverage is enforced using the [Very Good Workflows][very_good_coverage_link].
+To use the `langchain_gigachat` package, import it into your Dart file:
 
----
-
-## Running Tests 🧪
-
-To run all unit tests:
-
-```sh
-dart pub global activate coverage 1.2.0
-dart test --coverage=coverage
-dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info
+```dart
+import 'package:langchain_gigachat/langchain_gigachat.dart';
 ```
 
-To view the generated coverage report you can use [lcov](https://github.com/linux-test-project/lcov).
+Then, create an instance of the `GigaChatClient`:
 
-```sh
-# Generate Coverage Report
-genhtml coverage/lcov.info -o coverage/
-
-# Open Coverage Report
-open coverage/index.html
+```dart
+final client = GigaChatClient('your_api_key');
 ```
+
+Replace `'your_api_key'` with the API key provided by Tinkoff AI.
+
+Now, you can use the `client` object to send requests to the GigaChat API:
+
+```dart
+Future<Response> response = await client.generateAnswer(Query('What is the capital of Russia?'));
+```
+
+The `response` variable will contain the JSON response from the API containing the generated answer.
+
+## Supported Methods
+
+## License
+
+This project is licensed under the MIT License.
 
 [dart_install_link]: https://dart.dev/get-dart
 [github_actions_link]: https://docs.github.com/en/actions/learn-github-actions

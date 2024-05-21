@@ -1,11 +1,12 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:langchain_core/llms.dart';
-
+import 'package:langchain_core/chat_models.dart';
+import 'package:langchain_core/src/tools/base.dart';
 part 'types.freezed.dart';
 
 /// Generation options to pass into the GigaChat LLM
 @freezed
-class ChatGigaChatOptions extends LLMOptions with _$ChatGigaChatOptions {
+abstract class ChatGigaChatOptions extends ChatModelOptions
+    with _$ChatGigaChatOptions {
   /// Options for GigaChat LLM
   const factory ChatGigaChatOptions({
     /// The model used to generate completions

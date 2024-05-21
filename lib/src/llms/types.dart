@@ -5,7 +5,7 @@ part 'types.freezed.dart';
 
 /// Generation options to pass into the GigaChat LLM
 @freezed
-class GigaChatOptions extends LLMOptions with _$GigaChatOptions {
+abstract class GigaChatOptions extends LLMOptions with _$GigaChatOptions {
   /// Options for GigaChat LLM
   const factory GigaChatOptions({
     /// The model used to generate completions

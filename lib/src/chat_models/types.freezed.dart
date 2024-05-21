@@ -315,6 +315,14 @@ class _$ChatGigaChatOptionsImpl implements _ChatGigaChatOptions {
   _$$ChatGigaChatOptionsImplCopyWith<_$ChatGigaChatOptionsImpl> get copyWith =>
       __$$ChatGigaChatOptionsImplCopyWithImpl<_$ChatGigaChatOptionsImpl>(
           this, _$identity);
+
+  @override
+  // Stub
+  ChatToolChoice? get toolChoice => throw UnimplementedError();
+
+  @override
+  // Stub
+  List<ToolSpec>? get tools => throw UnimplementedError();
 }
 
 abstract class _ChatGigaChatOptions implements ChatGigaChatOptions {
