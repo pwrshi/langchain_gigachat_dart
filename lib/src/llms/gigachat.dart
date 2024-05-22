@@ -21,7 +21,8 @@ import 'package:langchain_gigachat/src/llms/types.dart';
 /// Options:
 ///```dart
 /// final llm = GigaChat(
-///   apiKey: openaiApiKey,
+///   clientId: 'SBER_CLIENT_ID',
+///   clientSecret: 'SBER_CLIENT_SECRET',
 ///   defaultOptions: const GigaChatOptions(
 ///     temperature: 0.9,
 ///     maxTokens: 100,
@@ -32,12 +33,12 @@ import 'package:langchain_gigachat/src/llms/types.dart';
 /// ### Authentication
 ///
 /// The GigaChat uses uuid_v4 for clientId and clientSecret for get accessToken.
-/// This implemetation update access token auto.
+/// This implementation update access token auto.
 /// For start work with GigaChat you can create
 /// [developer account](https://developers.sber.ru/studio/workspaces/)
 /// and create project  GigaChat API
 class GigaChat extends BaseLLM<GigaChatOptions> {
-  /// Constructor for work with GigaChat via BaseLLM iterface
+  /// Constructor for work with GigaChat via BaseLLM interface
   /// from langchain dart
   ///
   /// ### Https issues
@@ -56,7 +57,7 @@ class GigaChat extends BaseLLM<GigaChatOptions> {
   /// );
   /// ```
   /// Or you can install
-  /// [russian goverment cerificates](https://www.gosuslugi.ru/crt)
+  /// [russian government certificates](https://www.gosuslugi.ru/crt)
   ///
   ///
   /// ### Authentication
@@ -64,7 +65,7 @@ class GigaChat extends BaseLLM<GigaChatOptions> {
   /// The GigaChat uses uuid_v4 for clientId and clientSecret
   /// for get accessToken.
   ///
-  /// This implemetation update access token auto.
+  /// This implementation update access token auto.
   ///
   /// For start work with GigaChat you can create
   /// [developer account](https://developers.sber.ru/studio/workspaces/)

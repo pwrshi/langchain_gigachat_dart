@@ -19,8 +19,9 @@ import 'package:langchain_gigachat/src/chat_models/types.dart';
 ///
 /// Options:
 ///```dart
-/// final llm = GigaChat(
-///   apiKey: openaiApiKey,
+/// final chat = ChatGigaChat(
+///   clientId: 'SBER_CLIENT_ID',
+///   clientSecret: 'SBER_CLIENT_SECRET',
 ///   defaultOptions: const GigaChatOptions(
 ///     temperature: 0.9,
 ///     maxTokens: 100,
@@ -31,12 +32,12 @@ import 'package:langchain_gigachat/src/chat_models/types.dart';
 /// ### Authentication
 ///
 /// The GigaChat uses uuid_v4 for clientId and clientSecret for get accessToken.
-/// This implemetation update access token auto.
+/// This implementation update access token auto.
 /// For start work with GigaChat you can create
 /// [developer account](https://developers.sber.ru/studio/workspaces/)
 /// and create project  GigaChat API
 class ChatGigaChat extends BaseChatModel<ChatGigaChatOptions> {
-  /// Constructor for chating with GigaChat via BaseChatModel iterface
+  /// Constructor for chating with GigaChat via BaseChatModel interface
   /// from langchain dart
   ///
   /// ### Https issues
@@ -55,14 +56,14 @@ class ChatGigaChat extends BaseChatModel<ChatGigaChatOptions> {
   /// );
   /// ```
   /// Or you can install
-  /// [russian goverment cerificates](https://www.gosuslugi.ru/crt)
+  /// [russian government certificates](https://www.gosuslugi.ru/crt)
   ///
   ///
   /// ### Authentication
   ///
   /// The GigaChat uses uuid_v4 for clientId and clientSecret
   /// for get accessToken.
-  /// This implemetation update access token auto.
+  /// This implementation update access token auto.
   /// For start work with GigaChat you can create
   /// [developer account](https://developers.sber.ru/studio/workspaces/)
   /// and create project  GigaChat API

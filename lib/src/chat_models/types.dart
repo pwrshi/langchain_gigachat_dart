@@ -40,11 +40,11 @@ abstract class ChatGigaChatOptions extends ChatModelOptions
     /// Sets the time interval for transmitting parts of messages in seconds
     @Default(0.0) num updateInterval,
 
-    /// Used for versioning between corporates or individuals,
+    /// Used for versioning between corporate or individuals,
     /// GIGACHAT_API_CORP and GIGACHAT_API_PERS, respectively
     @Default('GIGACHAT_API_PERS') String scope,
 
-    /// Sets limit for concurrecy runnig (Default: 1)
+    /// Sets limit for concurrency running (Default: 1)
     @Default(1) int concurrencyLimit,
   }) = _ChatGigaChatOptions;
 }

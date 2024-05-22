@@ -1,11 +1,11 @@
-# 🦜️🔗 LangChain.dart / GigaChat (Unoffical)
+# 🦜️🔗 LangChain.dart / GigaChat (Unofficial)
 
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![langchain_gigachat](https://img.shields.io/pub/v/langchain_gigachat.svg)](https://pub.dev/packages/langchain_gigachat)
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 [![License: MIT][license_badge]][license_link]
 
-Unoffical [GigaChat](https://developers.sber.ru/docs/ru/gigachat/overview) module for [LangChain.dart](https://github.com/davidmigloz/langchain_dart).
+Unofficial [GigaChat](https://developers.sber.ru/docs/ru/gigachat/overview) module for [LangChain.dart](https://github.com/davidmigloz/langchain_dart).
 
 ## Features
 

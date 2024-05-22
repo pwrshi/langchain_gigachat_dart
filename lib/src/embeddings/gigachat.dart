@@ -11,7 +11,7 @@ import 'package:langchain_core/src/documents/document.dart';
 /// ### Authentication
 ///
 /// The GigaChat uses uuid_v4 for clientId and clientSecret for get accessToken.
-/// This implemetation update access token auto.
+/// This implementation update access token auto.
 /// For start work with GigaChat you can create
 /// [developer account](https://developers.sber.ru/studio/workspaces/)
 /// and create project  GigaChat API
@@ -31,7 +31,7 @@ class GigaChatEmbeddings implements Embeddings {
   /// );
   /// ```
   /// Or you can install
-  /// [russian goverment cerificates](https://www.gosuslugi.ru/crt)
+  /// [russian government certificates](https://www.gosuslugi.ru/crt)
   GigaChatEmbeddings({
     required String clientId,
     required String clientSecret,

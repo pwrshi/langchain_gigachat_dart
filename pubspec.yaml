@@ -1,7 +1,7 @@
 name: langchain_gigachat
 description: Wrapper for langchain_core and gigachat_dart
 version: 0.1.0
-publish_to: none
+repository: https://github.com/pwrshi/langchain_gigachat_dart
 
 topics:
   - ai
@@ -16,7 +16,6 @@ environment:
 dev_dependencies:
   build_runner: ^2.4.9
   freezed: ^2.5.2
-  mocktail: ^1.0.3
   test: ^1.25.2
   very_good_analysis: ^5.1.0
 dependencies:
