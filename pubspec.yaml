@@ -1,6 +1,6 @@
 name: langchain_gigachat
 description: Wrapper for langchain_core and gigachat_dart
-version: 0.1.0
+version: 0.1.1
 repository: https://github.com/pwrshi/langchain_gigachat_dart
 
 topics:
