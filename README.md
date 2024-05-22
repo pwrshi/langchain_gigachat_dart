@@ -1,51 +1,28 @@
-# Langchain Gigachat
+# 🦜️🔗 LangChain.dart / GigaChat (Unoffical)
 
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
+[![langchain_gigachat](https://img.shields.io/pub/v/langchain_gigachat.svg)](https://pub.dev/packages/langchain_gigachat)
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 [![License: MIT][license_badge]][license_link]
 
-langchain_gigachat is a package that provides access to the [GigaChat](https://developers.sber.ru/portal/products/gigachat) API in your Dart applications. This package allows you to interact with the AI and use its capabilities within your app.
+Unoffical [GigaChat](https://developers.sber.ru/docs/ru/gigachat/overview) module for [LangChain.dart](https://github.com/davidmigloz/langchain_dart).
 
-## Installation 💻
+## Features
 
-Install via `dart pub add`:
-
-```sh
-dart pub add langchain_gigachat
-```
-
----
-
-
-## Usage
-
-To use the `langchain_gigachat` package, import it into your Dart file:
-
-```dart
-import 'package:langchain_gigachat/langchain_gigachat.dart';
-```
-
-Then, create an instance of the `GigaChatClient`:
-
-```dart
-final client = GigaChatClient('your_api_key');
-```
-
-Replace `'your_api_key'` with the API key provided by Tinkoff AI.
-
-Now, you can use the `client` object to send requests to the GigaChat API:
-
-```dart
-Future<Response> response = await client.generateAnswer(Query('What is the capital of Russia?'));
-```
-
-The `response` variable will contain the JSON response from the API containing the generated answer.
-
-## Supported Methods
+- LLMs:
+  * `GigaChat`: wrapper around GigaChat Completions API.
+- Chat models:
+  * `ChatGigaChat`: wrapper around GigaChat Completions API in a chat-like fashion.
+- Embeddings:
+  * `GigaChatEmbeddings`: wrapper around GigaChat Embeddings API. (not tested)
 
 ## License
 
-This project is licensed under the MIT License.
+LangChain.dart is licensed under the 
+[MIT License](https://github.com/davidmigloz/langchain_dart/blob/main/LICENSE).
+
+langchain_gigachat is licensed under the 
+[MIT License](https://github.com/pwrshi/langchain_gigachat_dart/blob/main/LICENSE).
 
 [dart_install_link]: https://dart.dev/get-dart
 [github_actions_link]: https://docs.github.com/en/actions/learn-github-actions

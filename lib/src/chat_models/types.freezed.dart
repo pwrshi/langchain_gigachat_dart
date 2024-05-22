@@ -46,6 +46,10 @@ mixin _$ChatGigaChatOptions {
   /// Sets the time interval for transmitting parts of messages in seconds
   num get updateInterval => throw _privateConstructorUsedError;
 
+  /// Used for versioning between corporates or individuals,
+  /// GIGACHAT_API_CORP and GIGACHAT_API_PERS, respectively
+  String get scope => throw _privateConstructorUsedError;
+
   /// Sets limit for concurrecy runnig (Default: 1)
   int get concurrencyLimit => throw _privateConstructorUsedError;
 
@@ -69,6 +73,7 @@ abstract class $ChatGigaChatOptionsCopyWith<$Res> {
       double? repeatPenalty,
       bool? stream,
       num updateInterval,
+      String scope,
       int concurrencyLimit});
 }
 
@@ -93,6 +98,7 @@ class _$ChatGigaChatOptionsCopyWithImpl<$Res, $Val extends ChatGigaChatOptions>
     Object? repeatPenalty = freezed,
     Object? stream = freezed,
     Object? updateInterval = null,
+    Object? scope = null,
     Object? concurrencyLimit = null,
   }) {
     return _then(_value.copyWith(
@@ -128,6 +134,10 @@ class _$ChatGigaChatOptionsCopyWithImpl<$Res, $Val extends ChatGigaChatOptions>
           ? _value.updateInterval
           : updateInterval // ignore: cast_nullable_to_non_nullable
               as num,
+      scope: null == scope
+          ? _value.scope
+          : scope // ignore: cast_nullable_to_non_nullable
+              as String,
       concurrencyLimit: null == concurrencyLimit
           ? _value.concurrencyLimit
           : concurrencyLimit // ignore: cast_nullable_to_non_nullable
@@ -153,6 +163,7 @@ abstract class _$$ChatGigaChatOptionsImplCopyWith<$Res>
       double? repeatPenalty,
       bool? stream,
       num updateInterval,
+      String scope,
       int concurrencyLimit});
 }
 
@@ -175,6 +186,7 @@ class __$$ChatGigaChatOptionsImplCopyWithImpl<$Res>
     Object? repeatPenalty = freezed,
     Object? stream = freezed,
     Object? updateInterval = null,
+    Object? scope = null,
     Object? concurrencyLimit = null,
   }) {
     return _then(_$ChatGigaChatOptionsImpl(
@@ -210,6 +222,10 @@ class __$$ChatGigaChatOptionsImplCopyWithImpl<$Res>
           ? _value.updateInterval
           : updateInterval // ignore: cast_nullable_to_non_nullable
               as num,
+      scope: null == scope
+          ? _value.scope
+          : scope // ignore: cast_nullable_to_non_nullable
+              as String,
       concurrencyLimit: null == concurrencyLimit
           ? _value.concurrencyLimit
           : concurrencyLimit // ignore: cast_nullable_to_non_nullable
@@ -230,6 +246,7 @@ class _$ChatGigaChatOptionsImpl implements _ChatGigaChatOptions {
       this.repeatPenalty,
       this.stream,
       this.updateInterval = 0.0,
+      this.scope = 'GIGACHAT_API_PERS',
       this.concurrencyLimit = 1});
 
   /// The model used to generate completions
@@ -274,6 +291,12 @@ class _$ChatGigaChatOptionsImpl implements _ChatGigaChatOptions {
   @JsonKey()
   final num updateInterval;
 
+  /// Used for versioning between corporates or individuals,
+  /// GIGACHAT_API_CORP and GIGACHAT_API_PERS, respectively
+  @override
+  @JsonKey()
+  final String scope;
+
   /// Sets limit for concurrecy runnig (Default: 1)
   @override
   @JsonKey()
@@ -281,7 +304,7 @@ class _$ChatGigaChatOptionsImpl implements _ChatGigaChatOptions {
 
   @override
   String toString() {
-    return 'ChatGigaChatOptions(model: $model, temperature: $temperature, topP: $topP, n: $n, maxTokens: $maxTokens, repeatPenalty: $repeatPenalty, stream: $stream, updateInterval: $updateInterval, concurrencyLimit: $concurrencyLimit)';
+    return 'ChatGigaChatOptions(model: $model, temperature: $temperature, topP: $topP, n: $n, maxTokens: $maxTokens, repeatPenalty: $repeatPenalty, stream: $stream, updateInterval: $updateInterval, scope: $scope, concurrencyLimit: $concurrencyLimit)';
   }
 
   @override
@@ -301,13 +324,24 @@ class _$ChatGigaChatOptionsImpl implements _ChatGigaChatOptions {
             (identical(other.stream, stream) || other.stream == stream) &&
             (identical(other.updateInterval, updateInterval) ||
                 other.updateInterval == updateInterval) &&
+            (identical(other.scope, scope) || other.scope == scope) &&
             (identical(other.concurrencyLimit, concurrencyLimit) ||
                 other.concurrencyLimit == concurrencyLimit));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, model, temperature, topP, n,
-      maxTokens, repeatPenalty, stream, updateInterval, concurrencyLimit);
+  int get hashCode => Object.hash(
+      runtimeType,
+      model,
+      temperature,
+      topP,
+      n,
+      maxTokens,
+      repeatPenalty,
+      stream,
+      updateInterval,
+      scope,
+      concurrencyLimit);
 
   @JsonKey(ignore: true)
   @override
@@ -317,12 +351,10 @@ class _$ChatGigaChatOptionsImpl implements _ChatGigaChatOptions {
           this, _$identity);
 
   @override
-  // Stub
-  ChatToolChoice? get toolChoice => throw UnimplementedError();
+  ChatToolChoice? get toolChoice => null;
 
   @override
-  // Stub
-  List<ToolSpec>? get tools => throw UnimplementedError();
+  List<ToolSpec>? get tools => null;
 }
 
 abstract class _ChatGigaChatOptions implements ChatGigaChatOptions {
@@ -335,6 +367,7 @@ abstract class _ChatGigaChatOptions implements ChatGigaChatOptions {
       final double? repeatPenalty,
       final bool? stream,
       final num updateInterval,
+      final String scope,
       final int concurrencyLimit}) = _$ChatGigaChatOptionsImpl;
 
   @override
@@ -375,6 +408,11 @@ abstract class _ChatGigaChatOptions implements ChatGigaChatOptions {
 
   /// Sets the time interval for transmitting parts of messages in seconds
   num get updateInterval;
+  @override
+
+  /// Used for versioning between corporates or individuals,
+  /// GIGACHAT_API_CORP and GIGACHAT_API_PERS, respectively
+  String get scope;
   @override
 
   /// Sets limit for concurrecy runnig (Default: 1)

@@ -3,7 +3,9 @@ import 'package:gigachat_dart/gigachat_dart.dart';
 import 'package:langchain_core/chat_models.dart';
 import 'package:langchain_core/language_models.dart';
 
+/// mappings for gigachat_dart
 extension ChatMessageMapper on List<ChatMessage> {
+  /// map gigachat_dart List of messages from langchain interface
   List<Message> toMessages({bool streaming = false}) {
     return map<Message>(_mapMessage).toList(growable: false);
   }
@@ -39,7 +41,9 @@ extension ChatMessageMapper on List<ChatMessage> {
   }
 }
 
+/// mappings for gigachat_dart
 extension ChatResultMapper on ChatCompletion {
+  /// map gigachat_dart List of messages to langchain interface
   List<ChatResult> toChatResults() {
     return choices!
         .mapIndexed(
@@ -76,7 +80,9 @@ extension ChatResultMapper on ChatCompletion {
   }
 }
 
+/// mappings for gigachat_dart
 extension LLMResultMapperStream on ChatCompletionStream {
+  /// map gigachat_dart List of messages to langchain interface for streams
   List<ChatResult> toChatResults() {
     return choices!
         .mapIndexed(

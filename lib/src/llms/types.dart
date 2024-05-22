@@ -38,6 +38,10 @@ abstract class GigaChatOptions extends LLMOptions with _$GigaChatOptions {
     /// Sets the time interval for transmitting parts of messages in seconds
     @Default(0.0) num updateInterval,
 
+    /// Used for versioning between corporates or individuals,
+    /// GIGACHAT_API_CORP and GIGACHAT_API_PERS, respectively
+    @Default('GIGACHAT_API_PERS') String scope,
+
     /// Sets limit for concurrecy runnig (Default: 1)
     @Default(1) int concurrencyLimit,
   }) = _GigaChatOptions;

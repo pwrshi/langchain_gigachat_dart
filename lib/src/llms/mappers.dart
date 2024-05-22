@@ -3,7 +3,9 @@ import 'package:gigachat_dart/gigachat_dart.dart';
 import 'package:langchain_core/language_models.dart';
 import 'package:langchain_core/llms.dart';
 
+/// mappings for gigachat_dart
 extension LLMResultMapper on ChatCompletion {
+  /// map gigachat_dart List of messages to langchain interface
   List<LLMResult> toLLMResults({bool streaming = false}) {
     return choices!
         .mapIndexed(
@@ -41,7 +43,9 @@ extension LLMResultMapper on ChatCompletion {
   }
 }
 
+/// mappings for gigachat_dart
 extension LLMResultMapperStream on ChatCompletionStream {
+  /// map gigachat_dart List of messages to langchain interface
   List<LLMResult> toLLMResults({bool streaming = true}) {
     return choices!
         .mapIndexed(

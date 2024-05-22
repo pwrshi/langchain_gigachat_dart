@@ -5,7 +5,67 @@ import 'package:langchain_core/prompts.dart';
 import 'package:langchain_gigachat/src/chat_models/mappers.dart';
 import 'package:langchain_gigachat/src/chat_models/types.dart';
 
+/// Wrapper around [GigaChat API](https://developers.sber.ru/docs/ru/gigachat/overview).
+///
+/// Example:
+/// ```dart
+/// final chat = ChatGigaChat(
+///   clientId: 'SBER_CLIENT_ID',
+///   clientSecret: 'SBER_CLIENT_SECRET',
+/// );;
+/// final prompt = PromptValue.string('Tell me a joke');
+/// final res = await chat.invoke(prompt);
+/// ```
+///
+/// Options:
+///```dart
+/// final llm = GigaChat(
+///   apiKey: openaiApiKey,
+///   defaultOptions: const GigaChatOptions(
+///     temperature: 0.9,
+///     maxTokens: 100,
+///   ),
+/// );
+///
+///
+/// ### Authentication
+///
+/// The GigaChat uses uuid_v4 for clientId and clientSecret for get accessToken.
+/// This implemetation update access token auto.
+/// For start work with GigaChat you can create
+/// [developer account](https://developers.sber.ru/studio/workspaces/)
+/// and create project  GigaChat API
 class ChatGigaChat extends BaseChatModel<ChatGigaChatOptions> {
+  /// Constructor for chating with GigaChat via BaseChatModel iterface
+  /// from langchain dart
+  ///
+  /// ### Https issues
+  /// Client is abstract http client from `package:http`.
+  /// If you faced with certificate errors
+  /// you may ignore it:
+  /// ```dart
+  /// HttpClient client = new HttpClient();
+  /// client..badCertificateCallback =
+  /// ((X509Certificate cert, String host, int port) => true);
+  /// var ioClient = new IOClient(client);
+  /// http.Response resp = await ioClient.post(
+  ///   uri,
+  ///   body: utf8.encode(json.encode(body)),
+  ///   headers: headers,
+  /// );
+  /// ```
+  /// Or you can install
+  /// [russian goverment cerificates](https://www.gosuslugi.ru/crt)
+  ///
+  ///
+  /// ### Authentication
+  ///
+  /// The GigaChat uses uuid_v4 for clientId and clientSecret
+  /// for get accessToken.
+  /// This implemetation update access token auto.
+  /// For start work with GigaChat you can create
+  /// [developer account](https://developers.sber.ru/studio/workspaces/)
+  /// and create project  GigaChat API
   ChatGigaChat({
     required String clientId,
     required String clientSecret,
@@ -19,6 +79,7 @@ class ChatGigaChat extends BaseChatModel<ChatGigaChatOptions> {
           queryParams: queryParams,
           baseUrl: baseUrl,
           client: client,
+          scope: defaultOptions.scope,
         );
 
   final GigachatClient _client;

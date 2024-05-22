@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:langchain_core/chat_models.dart';
+// ignore: implementation_imports
 import 'package:langchain_core/src/tools/base.dart';
 part 'types.freezed.dart';
 
@@ -38,6 +39,10 @@ abstract class ChatGigaChatOptions extends ChatModelOptions
 
     /// Sets the time interval for transmitting parts of messages in seconds
     @Default(0.0) num updateInterval,
+
+    /// Used for versioning between corporates or individuals,
+    /// GIGACHAT_API_CORP and GIGACHAT_API_PERS, respectively
+    @Default('GIGACHAT_API_PERS') String scope,
 
     /// Sets limit for concurrecy runnig (Default: 1)
     @Default(1) int concurrencyLimit,
