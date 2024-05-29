@@ -66,7 +66,7 @@ class GigaChatEmbeddings implements Embeddings {
     );
     return data.data
         .map(
-          (d) => d.embedding.map((e) => e.toDouble()).toList(growable: false),
+          (d) => d.embedding.map((e) => e).toList(growable: false),
         )
         .toList(growable: false);
   }
@@ -79,9 +79,8 @@ class GigaChatEmbeddings implements Embeddings {
         input: [query],
       ),
     );
-    final body = data.data.first.embedding
-        .map((e) => e.toDouble())
-        .toList(growable: false);
+    final body =
+        data.data.first.embedding.map((e) => e).toList(growable: false);
     return body;
   }
 }

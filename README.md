@@ -4,6 +4,8 @@
 [![langchain_gigachat](https://img.shields.io/pub/v/langchain_gigachat.svg)](https://pub.dev/packages/langchain_gigachat)
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 [![License: MIT][license_badge]][license_link]
+[![Coverage](https://raw.githubusercontent.com/pwrshi/langchain_gigachat_dart/main/coverage_badge.svg)]()
+
 
 Unofficial [GigaChat](https://developers.sber.ru/docs/ru/gigachat/overview) module for [LangChain.dart](https://github.com/davidmigloz/langchain_dart).
 
@@ -14,7 +16,11 @@ Unofficial [GigaChat](https://developers.sber.ru/docs/ru/gigachat/overview) modu
 - Chat models:
   * `ChatGigaChat`: wrapper around GigaChat Completions API in a chat-like fashion.
 - Embeddings:
-  * `GigaChatEmbeddings`: wrapper around GigaChat Embeddings API. (not tested)
+  * `GigaChatEmbeddings`: wrapper around GigaChat Embeddings API.
+
+## Examples 
+
+Examples of work with GigaChat in tests.
 
 ## License
 
