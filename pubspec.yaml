@@ -16,7 +16,7 @@ environment:
 
 dev_dependencies:
   test: ^1.25.2
-  very_good_analysis: ^5.1.0
+  very_good_analysis: ">=5.1.0 <7.0.0"
 dependencies:
   collection: '>=1.17.0 <1.19.0'
   gigachat_dart: ^0.1.2
